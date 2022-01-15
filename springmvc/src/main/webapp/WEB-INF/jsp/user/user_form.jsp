@@ -13,7 +13,7 @@
 </head>
 <body style="padding: 20px">
 	<form class="pure-form" method="post"
-		action="/springmvc/mvc/user/${ action }">
+		action="${pageContext.request.contextPath}/mvc/user/${ action }">
 		<fieldset>
 			<legend>User Form</legend>
 			User name: <input type="text" id="name" name="name"
@@ -26,7 +26,7 @@
 				class="pure-button pure-button-primary" /> <input type="reset"
 				value="reset" class="pure-button pure-button-primary" /> <input
 				type="button" value="read"
-				onclick="window.location.href='/springmvc/mvc/user/read';"
+				onclick="window.location.href='${pageContext.request.contextPath}/mvc/user/read';"
 				class="pure-button pure-button-primary" />
 		</fieldset>
 	</form>
