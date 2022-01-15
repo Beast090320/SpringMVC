@@ -17,6 +17,8 @@
 	<bean name="/test" class="springmvc.controller.TestController" />
 	
 	<context:component-scan base-package="springmvc.controller"/>
+	<context:component-scan base-package="springmvc.service"/>
+	
 	
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           id="internalResourceViewResolver">
@@ -24,5 +26,8 @@
         <property name="suffix" value=".jsp" />
     </bean>
 	
+	
+	
+	<mvc:annotation-driven />
 	
 </beans>
